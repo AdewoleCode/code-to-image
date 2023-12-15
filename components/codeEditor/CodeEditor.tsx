@@ -19,19 +19,16 @@ import "ace-builds/src-noconflict/mode-python"
 interface CodeEditorProps {
   onCodeChange: (code: string) => void;
   language: string;
-  theme: string;
+  backgound: string;
   icon: string;
-  background?: string;
+  codeColor?: string;
   currentPadding?: string
 }
 
+const CodeEditor = ({ onCodeChange, language, icon, backgound, codeColor, currentPadding }: CodeEditorProps) => {
 
-
-
-const CodeEditor = ({ onCodeChange, language, icon, theme, background, currentPadding }: CodeEditorProps) => {
-
-  const [width, setWidth] = React.useState(1000)
-  const [height, setHeight] = React.useState<number | null>(500)
+  const [width, setWidth] = React.useState(900)
+  const [height, setHeight] = React.useState<number | null>(400)
 
   // @ts-ignore
   const handleResize = (event, direction, ref, posititon) => {
@@ -54,14 +51,14 @@ const CodeEditor = ({ onCodeChange, language, icon, theme, background, currentPa
     <Resizable
       minHeight={450}
       minWidth={510}
-      maxWidth={1000}
-      defaultSize={{ width: width, height: height || 500 }}
+      maxWidth={900}
+      defaultSize={{ width: width, height: height || 400 }}
       onResize={handleResize}
       className='resize-container relative'
-      // style={{ background: "red" }}
+      style={{ background: backgound }}
     >
       <div className='ace-wrapper'>
-        <div className="ace-header h-[52px] px-4 flex items-center justify-between bg-black bg-opacity-70">
+        <div className="ace-header h-[52px] px-4 flex items-center justify-between bg-black bg-opacity-80">
           <div className="dots flex items-center gap-1">
             <div className="w-3 h-3 rounded-full bg-[#ff5656]"></div>
             <div className="w-3 h-3 rounded-full bg-[#ffbc6a]"></div>
@@ -80,10 +77,10 @@ const CodeEditor = ({ onCodeChange, language, icon, theme, background, currentPa
 
         </div>
         <AceEditor value="funtion() {return 'hello world'; }"
-          theme="chaos"
+          theme={codeColor}
           mode={language.toLocaleLowerCase()}
           name="UNIQUE_ID_OF_DIV"
-          fontSize={23}
+          fontSize={18}
           wrapEnabled={true}
           showPrintMargin={false}
           highlightActiveLine={false}
