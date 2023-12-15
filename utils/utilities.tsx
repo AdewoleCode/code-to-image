@@ -46,3 +46,9 @@ export const backgroundArray = [
     "linear-gradient(337deg, #654ea3, #da98b4)",
     "linear-gradient(270deg, #514a9d, #24c6dc)",
 ]
+
+// todo
+// import/download icons from github and fix funtionality
+//react-outside clicker types install and implement funtionalities
+
+// try to add url funtionality. 
