@@ -13,6 +13,8 @@ export default function Home() {
   const [activeIcon, setActiveIcon] = useState(languagesArray[0].icons)
   const [color, setColor] = useState(themes[0])
   const [background, setBackground] = useState(backgroundArray[0])
+  const [paddings, setPaddings] = useState(["1rem", "2rem", "3rem"])
+  const [currentPaddings, setCurrentPaddings] = useState(paddings[1])
 
   return (
 
@@ -36,13 +38,23 @@ export default function Home() {
           background={background}
           setBackground={setBackground}
         />
-        <PaddingSelector />
+        <PaddingSelector
+          paddings={paddings}
+          setCurrentPaddings={setCurrentPaddings}
+          currentPaddings={currentPaddings}
+        />
         <button>
           Export png
         </button>
       </header>
       <div className="code-editor-ref mt-[7rem]">
-        <CodeEditor language={language} icon={activeIcon} codeColor={color} backgound={background} />
+        <CodeEditor
+          language={language}
+          icon={activeIcon}
+          codeColor={color}
+          backgound={background}
+          currentPadding={currentPaddings}
+        />
       </div>
     </main>
 

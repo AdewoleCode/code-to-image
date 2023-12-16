@@ -57,7 +57,7 @@ const CodeEditor = ({ onCodeChange, language, icon, backgound, codeColor, curren
       className='resize-container relative'
       style={{ background: backgound }}
     >
-      <div className='ace-wrapper'>
+      <div className='ace-wrapper' style={{padding: currentPadding}}>
         <div className="ace-header h-[52px] px-4 flex items-center justify-between bg-black bg-opacity-80">
           <div className="dots flex items-center gap-1">
             <div className="w-3 h-3 rounded-full bg-[#ff5656]"></div>

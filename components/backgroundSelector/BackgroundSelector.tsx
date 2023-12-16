@@ -34,7 +34,7 @@ const BackgroundSelector = ({ background, setBackground }: BackgroundSelectorPro
           
           {backgroundArray.map((backg, index) => (
             <div key={index}
-              className=' w-[20px] h-[20px] rounded-full pointer'
+              className=' w-[20px] h-[20px] rounded-full cursor-pointer'
               style={{ background: backg }}
               onClick={() => handleBackgroundChange(backg)}
             >
