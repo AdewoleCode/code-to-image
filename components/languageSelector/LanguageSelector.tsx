@@ -1,12 +1,13 @@
 "use client"
 import { languagesArray } from '@/utils/utilities';
+import { log } from 'console';
 import React, { useState } from 'react'
 import { RiArrowDropDownFill } from 'react-icons/ri';
 
 interface LanguageSelectorProps {
     language: string;
     setLanguage: (language: string) => void;
-    setActiveIcon: (icon: React.JSX.Element | undefined) => void;
+    setActiveIcon: (icons: string) => void;
 }
 
 const LanguageSelector = ({ language, setLanguage, setActiveIcon }: LanguageSelectorProps) => {
@@ -18,7 +19,9 @@ const LanguageSelector = ({ language, setLanguage, setActiveIcon }: LanguageSele
 
     const handleLanguageChange = (newLanguage: string) => {
         setLanguage(newLanguage)
-        const newActiveIcon = languagesArray.find(lang => lang.name === newLanguage)?.icons
+        const newActiveIcon = languagesArray.find(lang => lang.name === newLanguage)?.icon
+
+        console.log(newActiveIcon)
 
         if (newActiveIcon) {
             setActiveIcon(newActiveIcon)

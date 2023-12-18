@@ -10,16 +10,17 @@ import PaddingSelector from "@/components/paddingSelector/PaddingSelector";
 export default function Home() {
 
   const [language, setLanguage] = useState(languagesArray[0].name)
-  const [activeIcon, setActiveIcon] = useState(languagesArray[0].icons)
+  const [activeIcon, setActiveIcon] = useState(languagesArray[0].icon)
   const [color, setColor] = useState(themes[0])
   const [background, setBackground] = useState(backgroundArray[0])
-  const [paddings, setPaddings] = useState(["1rem", "2rem", "3rem"])
+  const [paddings, setPaddings] = useState(["20px", "30px", "40px"])
   const [currentPaddings, setCurrentPaddings] = useState(paddings[1])
+
 
   return (
 
     <main
-      className="h-[120vh] flex flex-col items-center justify-between"
+      className="min-h-[120vh] flex flex-col items-center justify-between"
     >
       <header
         className="mt-5 w-[905px] p-3 fixed top-0 left-1/2 translate-x-[-50%] z-10 bg-[#191919]
