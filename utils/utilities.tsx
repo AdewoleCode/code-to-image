@@ -1,34 +1,34 @@
-import one from "../assets/1.svg"
-import two from "../assets/2.svg"
-import three from "../assets/3.svg"
-import four from "../assets/4.svg"
-import five from "../assets/5.svg"
-import six from "../assets/wifi.png"
+// import one from "../assets/1.svg"
+// import two from "../assets/2.svg"
+// import three from "../assets/3.svg"
+// import four from "../assets/4.svg"
+// import five from "../assets/5.svg"
+// import six from "../assets/wifi.png"
 
 export const languagesArray = [
     {
         name: "Javascript",
-        icon: "../assets/2.svg"
+        icon: "icons/javascript.svg"
     },
     {
         name: "Html",
-        icon: two
+        icon: "icons/html.svg"
     },
     {
         name: "Css",
-        icon: three
+        icon: "icons/css.svg"
     },
     {
         name: "Python",
-        icon: four
+        icon: "icons/python.svg"
     },
     {
         name: "Typescript",
-        icon: five
+        icon: "icons/typescript.svg"
     },
     {
         name: "Java",
-        icon: six
+        icon: "icons/java.svg"
     },
 ]
 
