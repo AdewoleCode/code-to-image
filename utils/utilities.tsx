@@ -49,7 +49,7 @@ export const backgroundArray = [
 
 
 export const initialCodeValue = `function sayNameAndAge(nameValue, ageValue){
-    return your name is {nameValue} and you're {ageValue} years old;
+    return your name is {nameValue} and you are {ageValue} years old;
 }
 
 const result1 = sayNameAndAge('kunle', '40')

@@ -29,7 +29,7 @@ interface CodeEditorProps {
 const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding }: CodeEditorProps) => {
 
   const [width, setWidth] = React.useState(900)
-  const [height, setHeight] = React.useState<number | null>(400)
+  const [height, setHeight] = React.useState<number | null>(500)
   const [title, setTitle] = React.useState("untitled-1")
   const [codeValue, setCodeValue] = React.useState(initialCodeValue)
 
@@ -57,7 +57,7 @@ const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding }: Co
 
   return (
     <Resizable
-      minHeight={450}
+      minHeight={550}
       minWidth={510}
       maxWidth={900}
       defaultSize={{ width: width, height: height || 500 }}
@@ -90,7 +90,7 @@ const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding }: Co
           theme={codeColor}
           mode={language.toLocaleLowerCase()}
           name="UNIQUE_ID_OF_DIV"
-          fontSize={18}
+          fontSize={16}
           wrapEnabled={true}
           showPrintMargin={false}
           height={`calc(${height}px - ${currentPadding} - ${currentPadding})`}
