@@ -41,8 +41,8 @@ export default function Home() {
       className="min-h-[120vh] flex flex-col items-center justify-between"
     >
       <header
-        className="mt-5 w-[905px] p-3 fixed top-0 left-1/2 translate-x-[-50%] z-10 bg-[#191919]
-        rounded border border-[#3c3c3c] shadow-md flex items-center justify-between gap-[50px] text-[17px]"
+        className="mt-3 w-[915px] p-3 fixed top-0 left-1/2 translate-x-[-50%] z-10 bg-[#191919]
+        rounded border border-[#3c3c3c] shadow-md flex items-center justify-between gap-[43px] text-[17px]"
       >
         <LanguageSelector
           language={language}
@@ -67,17 +67,17 @@ export default function Home() {
           justifySelf: "center",
           alignSelf: "center",
           color: "red",
-          padding: "0.6rem 1rem 0.6rem 1rem",
+          padding: "0.6rem 0.9rem 0.6rem 0.9rem",
           background: "#fff",
           borderRadius: "5px",
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           fontWeight: "800"
         }}
           onClick={handleImageDownload}>
           Download png
         </button>
       </header>
-      <div className="code-editor-ref mt-[7rem]" ref={EditorRef}>
+      <div className="code-editor-ref mt-[8rem]" ref={EditorRef}>
         <CodeEditor
           language={language}
           icon={activeIcon}

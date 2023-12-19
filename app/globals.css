@@ -30,8 +30,8 @@ body {
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
     border: 3px solid rgba(249, 249, 249, 0.08);
     font-weight: 600 !important;
-    font-size: 18px !important;
-    line-height: 1.6rem !important;
+    font-size: 18.5px !important;
+    line-height: 1.3rem !important;
 }
 
 .ace_content {
