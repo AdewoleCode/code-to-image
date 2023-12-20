@@ -1,9 +1,3 @@
-// import one from "../assets/1.svg"
-// import two from "../assets/2.svg"
-// import three from "../assets/3.svg"
-// import four from "../assets/4.svg"
-// import five from "../assets/5.svg"
-// import six from "../assets/wifi.png"
 
 export const languagesArray = [
     {
@@ -57,11 +51,24 @@ const result2 = sayNameAndAge('ola', '10')
 const result3 = sayNameAndAge('wale', '25')
 
 console.log(result1, result2, result3)
-
 `
+export const FontSizesArray = [
+    {
+        fontSize: "17px",
+        fontDesc: "small"
+    },
+    {
+        fontSize: "20px",
+        fontDesc: "medium"
+    },
+    {
+        fontSize: "24px",
+        fontDesc: "large"
+    }
+]
 
 // todo
 // import/download icons from github and fix funtionality
 //react-outside clicker types install and implement funtionalities
 
-// try to add url funtionality. 
+// add url funtionality. 

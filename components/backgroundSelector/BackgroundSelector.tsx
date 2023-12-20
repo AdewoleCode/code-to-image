@@ -24,7 +24,7 @@ const BackgroundSelector = ({ background, setBackground }: BackgroundSelectorPro
 
   return (
     <div className='bg-selector relative'>
-      <p className='py-[5px] text-[18px] font-medium'>ThemeSelector</p>
+      <p className='py-[8px] text-[17px] font-medium'>ThemeSelector</p>
       <div className='dropdown-title capitalize w-[120px]' onClick={toggleDropdown}>
         <div className='rounded-full w-[20px] h-[20px]' style={{ background: background }}></div>
         <RiArrowDropDownFill style={{ fontSize: "25px", color: "red" }} />

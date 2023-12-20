@@ -1,4 +1,4 @@
-"yse client"
+"use client"
 
 import React from 'react'
 
@@ -17,7 +17,7 @@ const PaddingSelector = ({ currentPaddings, setCurrentPaddings, paddings }: Padd
   return (
 
     <div>
-      <p className='py-[5px] text-[18px] font-medium'>PaddingSelector</p>
+      <p className='py-[8px] text-[17px] font-medium'>PaddingSelector</p>
       <div className='flex gap-2'>
         {
           paddings.map((pad, index) => {

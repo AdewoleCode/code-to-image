@@ -32,7 +32,7 @@ const LanguageSelector = ({ language, setLanguage, setActiveIcon }: LanguageSele
     return (
         <>
             <div >
-                <p className='py-[5px] text-[18px] font-medium'>Language</p>
+                <p className='py-[8px] text-[17px] font-medium'>Language</p>
                 <div className='dropdown-title capitalize w-[120px]' onClick={toggleDropdown}>
                     <h2 className='text-[16px]'>{language}</h2>
                     <RiArrowDropDownFill style={{ fontSize: "25px", color: "red" }} />

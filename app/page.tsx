@@ -1,12 +1,13 @@
 "use client"
 import CodeEditor from "@/components/codeEditor/CodeEditor";
 import { useRef, useState } from "react";
-import { themes, languagesArray, backgroundArray } from "@/utils/utilities";
+import { themes, languagesArray, backgroundArray, FontSizesArray } from "@/utils/utilities";
 import LanguageSelector from "@/components/languageSelector/LanguageSelector";
 import CodeColors from "@/components/codeColors/CodeColors";
 import BackgroundSelector from "@/components/backgroundSelector/BackgroundSelector";
 import PaddingSelector from "@/components/paddingSelector/PaddingSelector";
 import html2canvas from "html2canvas";
+import FontSelector from "@/components/fontSelector/FontSelector";
 
 export default function Home() {
 
@@ -18,6 +19,9 @@ export default function Home() {
   const [background, setBackground] = useState(backgroundArray[0])
   const [paddings, setPaddings] = useState(["20px", "30px", "40px"])
   const [currentPaddings, setCurrentPaddings] = useState(paddings[1])
+  const [currentFont, setCurrentFont] = useState(FontSizesArray[1].fontSize)
+  const [currentFontDesc, setCurrentFontDesc] = useState(FontSizesArray[0].fontDesc)
+
 
   const handleImageDownload = async () => {
     const editorElement = EditorRef.current;
@@ -35,14 +39,12 @@ export default function Home() {
   }
 
   return (
-
-
     <main
       className="min-h-[120vh] flex flex-col items-center justify-between"
     >
       <header
-        className="mt-3 w-[915px] p-3 fixed top-0 left-1/2 translate-x-[-50%] z-10 bg-[#191919]
-        rounded border border-[#3c3c3c] shadow-md flex items-center justify-between gap-[43px] text-[17px]"
+        className="mt-3 w-[970px] p-3 fixed top-0 left-1/2 translate-x-[-50%] z-10 bg-[#191919]
+        rounded border border-[#3c3c3c] shadow-md flex items-center justify-between gap-[30px] text-[17px]"
       >
         <LanguageSelector
           language={language}
@@ -56,6 +58,11 @@ export default function Home() {
         <BackgroundSelector
           background={background}
           setBackground={setBackground}
+        />
+        <FontSelector
+          setCurrentFont={setCurrentFont}
+          currentFontDesc= {currentFontDesc}
+          setCurrentFontDesc = {setCurrentFontDesc}
         />
         <PaddingSelector
           paddings={paddings}
@@ -84,6 +91,7 @@ export default function Home() {
           codeColor={color}
           backgound={background}
           currentPadding={currentPaddings}
+          currentFont={currentFont}
         />
       </div>
     </main>

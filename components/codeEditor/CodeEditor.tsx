@@ -24,9 +24,10 @@ interface CodeEditorProps {
   icon: string;
   codeColor?: string;
   currentPadding?: string
+  currentFont?: string
 }
 
-const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding }: CodeEditorProps) => {
+const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding, currentFont }: CodeEditorProps) => {
 
   const [width, setWidth] = React.useState(950)
   const [height, setHeight] = React.useState<number | null>(500)
@@ -90,7 +91,8 @@ const CodeEditor = ({ language, icon, backgound, codeColor, currentPadding }: Co
           theme={codeColor}
           mode={language.toLocaleLowerCase()}
           name="UNIQUE_ID_OF_DIV"
-          fontSize={15}
+          fontSize={currentFont}
+          
           wrapEnabled={true}
           showPrintMargin={false}
           height={`calc(${height}px - ${currentPadding} - ${currentPadding})`}
