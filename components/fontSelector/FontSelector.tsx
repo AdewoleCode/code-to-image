@@ -11,7 +11,7 @@ interface FontSelectorProps {
 }
 
 
-const fontSelector = ({ setCurrentFont, currentFontDesc, setCurrentFontDesc }: FontSelectorProps) => {
+const FontSelector = ({ setCurrentFont, currentFontDesc, setCurrentFontDesc }: FontSelectorProps) => {
     const [showDropdown, setShowDropdown] = React.useState(false)
 
     const toggleDropdown = () => {
@@ -50,4 +50,4 @@ const fontSelector = ({ setCurrentFont, currentFontDesc, setCurrentFontDesc }: F
     )
 }
 
-export default fontSelector
+export default FontSelector
